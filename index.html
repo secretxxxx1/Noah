@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Noah — Dringende medizinische Hilfe</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+  --green:#22c55e;
+  --green-soft:#dcfce7;
+  --red:#dc2626;
+  --border:#e5e7eb;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,system-ui;
+  background:var(--bg);
+  color:var(--text);
+  padding-bottom:96px;
+}
+.wrap{
+  max-width:520px;
+  margin:auto;
+  padding:1rem;
+}
+.card{
+  background:var(--card);
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  overflow:hidden;
+}
+.hero img{
+  width:100%;
+  display:block;
+}
+.section{padding:1.1rem}
+.tag{
+  font-size:.75rem;
+  font-weight:700;
+  color:var(--red);
+  letter-spacing:.04em;
+  margin-bottom:.4rem;
+}
+h1{
+  font-size:1.3rem;
+  margin:.2rem 0 .5rem;
+}
+.desc{
+  font-size:.9rem;
+  color:var(--muted);
+  line-height:1.5;
+}
+.progress-wrap{margin-top:1rem}
+.progress-top{
+  display:flex;
+  justify-content:space-between;
+  font-weight:600;
+  font-size:.9rem;
+}
+.progress-bar{
+  height:10px;
+  background:var(--green-soft);
+  border-radius:999px;
+  overflow:hidden;
+  margin-top:.4rem;
+}
+.progress-fill{
+  height:100%;
+  background:linear-gradient(90deg,#16a34a,#22c55e);
+  width:0%;
+}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:.6rem;
+  margin-top:.8rem;
+}
+.stat{
+  background:#f8fafc;
+  border-radius:12px;
+  padding:.6rem;
+  text-align:center;
+  font-size:.75rem;
+  color:var(--muted);
+}
+.stat strong{
+  display:block;
+  color:var(--text);
+  font-size:.9rem;
+}
+.amounts{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:.6rem;
+  margin-top:1rem;
+}
+.amount{
+  padding:.8rem;
+  border:1px solid var(--border);
+  border-radius:12px;
+  font-weight:600;
+  text-align:center;
+  background:#fff;
+  text-decoration:none;
+  color:var(--text);
+}
+.amount.primary{
+  border-color:var(--green);
+  background:#f0fdf4;
+}
+.feed{
+  margin-top:1rem;
+  font-size:.8rem;
+}
+.feed div{
+  display:flex;
+  justify-content:space-between;
+  padding:.4rem 0;
+  border-bottom:1px solid var(--border);
+}
+.family{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-top:14px;
+}
+.family img{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  object-fit:cover;
+}
+.fixed-cta{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:var(--red);
+  padding:.9rem;
+}
+.fixed-cta a{
+  display:block;
+  text-align:center;
+  color:#fff;
+  font-weight:700;
+  letter-spacing:.02em;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+  <div class="card">
+
+    <div class="hero">
+      <img src="https://i.postimg.cc/Kzw9DxC8/IMG-20251219-023639.jpg" alt="Noah im Krankenhaus">
+    </div>
+
+    <div class="section">
+      <div class="tag">DRINGENDER MEDIZINISCHER NOTFALL</div>
+
+      <h1>Noah braucht jetzt lebenswichtige Unterstützung</h1>
+
+      <p class="desc">
+        Noah leidet an Zerebralparese. Jede Verzögerung verschlechtert seine motorischen
+        und neurologischen Fähigkeiten dauerhaft.
+        <br><br>
+        Die notwendige Therapie kann seine Entwicklung stabilisieren —
+        aber nur, wenn sie rechtzeitig begonnen wird.
+      </p>
+
+      <div class="progress-wrap">
+        <div class="progress-top">
+          <span id="raised">12.840€</span>
+          <span>50.000 € Ziel</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="bar"></div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><strong>26%</strong>Erreicht</div>
+        <div class="stat"><strong>Februar</strong>Frist</div>
+        <div class="stat"><strong>37.160 €</strong>Noch benötigt</div>
+      </div>
+
+      <div class="amounts">
+        <a class="amount primary" href="https://donate.stripe.com/eVq28q5PzaTCdAR5y8c3m01">10 €</a>
+        <a class="amount" href="https://donate.stripe.com/28E00icdX7HqaoFe4Ec3m02">25 €</a>
+        <a class="amount" href="https://donate.stripe.com/9B67sK3Hr7HqcwN7Ggc3m03">50 €</a>
+        <a class="amount" href="https://donate.stripe.com/5kQaEW7XH6Dm9kB7Ggc3m04">100 €</a>
+        <a class="amount" href="https://donate.stripe.com/bJefZg6TD0eYeEV7Ggc3m05">250 €</a>
+        <a class="amount" href="https://donate.stripe.com/8x27sK91L0eY9kB0dOc3m06">Eigener Betrag</a>
+      </div>
+
+      <div class="feed" id="feed"></div>
+
+      <div class="family">
+        <img src="https://i.postimg.cc/yYmHxbSX/Image-fx-(16)-png-(6).jpg" alt="Familie von Noah">
+        <p class="desc">
+          Die Kampagne wird von Noahs Familie verwaltet.
+          Alle Spenden werden ausschließlich für medizinische Behandlungen verwendet.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="fixed-cta">
+  <a href="https://donate.stripe.com/8x27sK91L0eY9kB0dOc3m06">Jetzt helfen</a>
+</div>
+
+<script>
+let raised = 12840;
+const bar = document.getElementById('bar');
+
+function update(){
+  raised += Math.floor(Math.random()*90)+30;
+  document.getElementById('raised').textContent = raised.toLocaleString('de-DE') + ' €';
+  bar.style.width = Math.min(raised/50000*100,100) + '%';
+}
+update();
+setInterval(update, 4500);
+
+const names=['Anna','Lukas','Mia','Jonas','Emma','Paul','Sophie'];
+const vals=['10 €','25 €','50 €','100 €'];
+const feed=document.getElementById('feed');
+
+function add(){
+  const d=document.createElement('div');
+  d.innerHTML=`<span>${names[Math.random()*names.length|0]}</span><span>${vals[Math.random()*vals.length|0]}</span>`;
+  feed.prepend(d);
+  if(feed.children.length>4) feed.lastChild.remove();
+}
+for(let i=0;i<3;i++) add();
+setInterval(add, 4000);
+</script>
+
+</body>
+</html>
