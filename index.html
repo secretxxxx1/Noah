@@ -253,7 +253,7 @@ update();
 setInterval(update, 4500);
 
 
-/* DOADORES MAIS NATURAIS */
+/* DOADORES */
 
 const donors=[
 {name:"Anna 🇩🇪",amount:"12 €",time:"2 min ago"},
@@ -275,8 +275,26 @@ const donors=[
 
 const feed=document.getElementById('feed');
 
+/* embaralhar lista (Fisher-Yates) */
+function shuffle(array){
+  for(let i=array.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [array[i],array[j]]=[array[j],array[i]];
+  }
+}
+
+shuffle(donors);
+
+let index=0;
+
 function add(){
-  const d=donors[Math.random()*donors.length|0];
+
+  if(index>=donors.length){
+    shuffle(donors); // novo ciclo
+    index=0;
+  }
+
+  const d=donors[index++];
   const el=document.createElement('div');
 
   el.innerHTML=
