@@ -252,18 +252,44 @@ function update(){
 update();
 setInterval(update, 4500);
 
-const names=['Anna','Lukas','Mia','Jonas','Emma','Paul','Sophie'];
-const vals=['10 €','25 €','50 €','100 €'];
+
+/* DOADORES MAIS NATURAIS */
+
+const donors=[
+{name:"Anna 🇩🇪",amount:"12 €",time:"2 min ago"},
+{name:"Luca 🇮🇹",amount:"25 €",time:"5 min ago"},
+{name:"Sophie 🇫🇷",amount:"19 €",time:"8 min ago"},
+{name:"Mateo 🇪🇸",amount:"40 €",time:"12 min ago"},
+{name:"Oliver 🇬🇧",amount:"10 €",time:"15 min ago"},
+{name:"Emma 🇳🇱",amount:"33 €",time:"22 min ago"},
+{name:"Noah 🇨🇭",amount:"27 €",time:"28 min ago"},
+{name:"Elena 🇵🇹",amount:"14 €",time:"35 min ago"},
+{name:"Jonas 🇩🇰",amount:"50 €",time:"41 min ago"},
+{name:"Lucas 🇧🇪",amount:"18 €",time:"48 min ago"},
+{name:"Mila 🇦🇹",amount:"21 €",time:"1 hour ago"},
+{name:"Arthur 🇮🇪",amount:"60 €",time:"2 hours ago"},
+{name:"Eva 🇨🇿",amount:"17 €",time:"3 hours ago"},
+{name:"Leo 🇸🇪",amount:"45 €",time:"4 hours ago"},
+{name:"Nina 🇳🇴",amount:"28 €",time:"5 hours ago"}
+];
+
 const feed=document.getElementById('feed');
 
 function add(){
-  const d=document.createElement('div');
-  d.innerHTML=`<span>${names[Math.random()*names.length|0]}</span><span>${vals[Math.random()*vals.length|0]}</span>`;
-  feed.prepend(d);
-  if(feed.children.length>4) feed.lastChild.remove();
+  const d=donors[Math.random()*donors.length|0];
+  const el=document.createElement('div');
+
+  el.innerHTML=
+  `<span>${d.name} • ${d.time}</span>
+   <span>${d.amount}</span>`;
+
+  feed.prepend(el);
+
+  if(feed.children.length>6) feed.lastChild.remove();
 }
-for(let i=0;i<3;i++) add();
-setInterval(add, 4000);
+
+for(let i=0;i<4;i++) add();
+setInterval(add, 4200);
 </script>
 
 </body>
